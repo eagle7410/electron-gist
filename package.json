@@ -1,0 +1,25 @@
+{
+  "name": "electron-gist",
+  "version": "1.0.0",
+  "description": "electron app for git gists",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eagle7410/electron-gist.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eagle7410/electron-gist/issues"
+  },
+  "homepage": "https://github.com/eagle7410/electron-gist#readme",
+  "devDependencies": {
+    "electron": "^2.0.2",
+    "electron-packager": "^12.1.0",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
