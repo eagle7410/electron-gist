@@ -1,10 +1,9 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
 let win;
 
-async function createWindow () {
+function createWindow () {
 	// Создаёт окно браузера.
-	win = new BrowserWindow({width: 800, height: 600});
-
+	win = new BrowserWindow({icon: `${__dirname}/ico.png`,width: 800, height: 600});
 	// и загрузит index.html приложение.
 	win.loadFile('index.html');
 
@@ -18,6 +17,24 @@ async function createWindow () {
 		// тогда вы должны удалить соответствующий элемент.
 		win = null
 	})
+	// Create the Application's main menu
+	const template = [
+		{
+			label: "Application",
+			submenu: [
+				{ label: "Quit", accelerator: "Command+Q", click: () => app.quit() },
+				{ label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
+				{ label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
+				{ type: "separator" },
+				{ label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+				{ label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+				{ label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
+				{ label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
+			]
+		}
+	];
+
+	Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 }
 
 // Этот метод будет вызываться, когда Electron закончит
