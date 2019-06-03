@@ -8,10 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "package": "electron-packager ./ ElectronGist --all --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out ./apps",
-  	"pack:osx": "electron-packager . ElectronGist --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out=apps --platform=darwin --arch=x64 --icon=ico.icns",
-	"pack:lnx64": "electron-packager . ElectronGist --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out=apps --platform=linux --arch=x64",
-	"pack:win64": "electron-packager . ElectronGist --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out=apps --platform=win32 --arch=x64 --icon=ico.ico",
-	"packs": "npm run pack:osx && npm run pack:lnx64 && npm run pack:win64"
+    "pack:osx": "electron-packager . ElectronGist --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out=apps --platform=darwin --arch=x64 --icon=ico.icns",
+    "pack:lnx64": "electron-packager . ElectronGist --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out=apps --platform=linux --arch=x64",
+    "pack:win64": "electron-packager . ElectronGist --overwrite --ignore='.gitignore|/.idea|/apps|/node_modules/(babel*|gulp*|electron*|grunt*)|/.idea/' --out=apps --platform=win32 --arch=x64 --icon=ico.ico",
+    "packs": "npm run pack:osx && npm run pack:lnx64 && npm run pack:win64"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "url": "https://github.com/eagle7410/electron-gist/issues"
   },
   "devDependencies": {
-    "electron": "^2.0.2",
+    "electron": "5.0.2",
     "electron-packager": "^12.1.0"
   }
 }
